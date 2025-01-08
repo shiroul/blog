@@ -5,3 +5,6 @@ html, body {
     padding: 0;
 }
 
+.home-content {
+    height: 100vh;
+}

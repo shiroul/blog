@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Us - Finsweet</title>
+    <link rel="stylesheet" href="{{ asset('css/header-footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-<body>
-    <ul>
-        <li><a href="{{ route('home') }}">Home</a></li>
-        <li><a href="{{ route('blog') }}">Blog</a></li>
-        <li><a href="{{ route('about') }}">About Us</a></li>
-        <li><a href="{{ route('contact') }}">Contact Us</a></li>
-        <li><a href="{{ route('subscribe') }}">Subscribe</a></li>
-    </ul>
-    <section>
-        about
-    </section>
-</body>
+    <x-header />
+
+    <main class="about-main">
+        <div class="container">
+            <h1>About Us</h1>
+            <div class="about-content">
+                <p>Your about content here</p>
+            </div>
+            <x-authors :authors="$authors" />
+            <x-testimonials :testimonials="$testimonials" />
+        </div>
+    </main>
+
+    <x-footer />
 </body>
 </html>
